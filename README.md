@@ -3,43 +3,25 @@
 This repository accompanies the NEST tutorial at the EITN Fall School in Computational Neuroscience 2024.
 Here you can find the presentation slides, Jupyter notebooks and other materials. 
 
-## Installation instructions for the ...
+## EBRAINS platform
+During the hands-on part of the tutorial, we will (hopefully be able to) use the EBRAINS platform. To get started, simply check out this repository on EBRAINS and select the latest stable kernel **24.04**.
 
-## Installation instructions
+## Instructions for local installation
 
-Complete documentation for NEST and NESTML can be found [here](https://www.nest-simulator.org/documentation/) and [here](https://nestml.readthedocs.io).
-Please make sure you have the latest releases (NEST 3.3 and NESTML 5.1.0) or the current development versions from the respective GitHub repositories.
-Note that in the tutorial we will not use NESTML, so its installation is optional. 
+Complete documentation for NEST and NESTML can be found [here](https://www.nest-simulator.org/documentation/) and [here](https://nestml.readthedocs.io/), including installation instructions for different platforms. 
 
-### Windows
-1. Use VM image provided [here](https://nest-simulator.readthedocs.io/en/v3.3/installation/livemedia.html#live-media).
-2. If you have access to the Ubuntu application on newer Windows versions, you may try installing NEST via the package manager:
-```shell
-sudo add-apt-repository ppa:nest-simulator/nest
-sudo apt-get update
-sudo apt-get install nest
-```
+While it's possible to use the EBRAINS platform in principle, it is strongly recommended that you install them locally to avoid restrictions on the computational resources.
 
-### Linux / macOS
-1. You can use the NEST Docker container as detailed [here](). We recommend using the **EBRAINS host**  instead of the Docker hub image linked in the documentation, as this contains the latest NESTML release:
-```shell
-docker pull docker-registry.ebrains.eu/nest/nest-simulator:3.3
-```
+We recommend either **NEST 3.7** with **NESTML 7.0.2** for a stable combination, or cloning the respective repositories from GitHub (https://github.com/nest/nest-simulator and https://github.com/nest/nestml) for the **current development versions** (master branch). 
 
-2. You can also install NEST using `conda install nest`, but the latest NESTML version may not work with this solution. 
+Note that NESTML is required only for some parts of the project, so you can delay its installation until (and if) is needed. 
 
-    An alternative would be to [build and install NEST manually](https://nest-simulator.readthedocs.io/en/v3.3/installation/linux_install.html#linux-install)
-in the Conda environment (e.g., downloading the zip and install using Cmake), along with `pip install nestml`.  
+### Some tips:
 
-3. In Ubuntu, installation is also possible via the PPA repository:
+For cross-platform solutions, use the Docker or virtual machine images from the website.
+On Linux and MacOS, in addition to installing via the package manager, there's also the option of install from source by compiling the code yourself (it's not that complicated, see [here](https://nest-simulator.readthedocs.io/en/stable/installation/developer.html#dev-install)) in a conda environment.
 
-```shell
-sudo add-apt-repository ppa:nest-simulator/nest
-sudo apt-get update
-sudo apt-get install nest
-```
-
-For Linux and macOS, you can use the `nest_env_OS.yaml` configuration files to set up your environment some relevant packages. 
+**Python versions:** try to use 3.10 or 3.11 (3.12 is not officially supported yet, but it may still work).
 
 ## Get in touch
 
