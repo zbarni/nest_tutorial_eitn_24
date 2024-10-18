@@ -45,7 +45,7 @@ synapse stdp_pl:
     post_trace += 1
     
     # update for causal firing (potentiation)
-    w = w + lambda * w_0 ** (1-mu_plus) * (w/w_0)**mu_plus * pre_trace
+    w = w + lambda * w_0 * (w/w_0)**mu_plus * pre_trace
 
   onReceive(pre_spikes):
     pre_trace += 1
